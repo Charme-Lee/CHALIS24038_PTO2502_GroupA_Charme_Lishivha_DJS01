@@ -20,15 +20,42 @@ modalDescription.textContent = item.description || "No description available";
 modalUpdated.textContent = `Last updated: ${formatDate(item.updated)}`;
 modalGenres.innerHTML = getGenreTitles(item.genres, genres)
   .map(g => `<button class="genre-button">${g}</button>`)
-    .join( "" );
+    .join( "" );}
   
 modalSeasonList.innerHTML = "";
-for (let i = 1; i <= item.seasons; i++) {
-  const seasonDiv = document.createElement("div");
-  seasonDiv.className = "season-item";
-  seasonDiv.innerHTML = `
+  for ( let i = 1; i <= item.seasons; i++ )
+  {
+    const seasonDiv = document.createElement( "div" );
+    seasonDiv.className = "season-item";
+    seasonDiv.innerHTML = `
     Season ${i}: Getting Started ${i}
     <span>${12 * i} episodes</span>
   `;
-  modalSeasonList.appendChild(seasonDiv);
-}
+    modalSeasonList.appendChild( seasonDiv );
+  
+    modalOverlay.style.display = "block";
+    modal.style.display = "block";
+    document.body.classList.add( "modal-open" );
+
+
+    function hide ()
+    {
+      modalOverlay.style.display = "none";
+      modal.style.display = "none";
+      document.body.classList.remove( "modal-open" );
+    }
+  
+    modalClose.addEventListener( "click", hide );
+    modalOverlay.addEventListener( "click", e =>
+    {
+      if ( e.target === modalOverlay ) hide();
+    } );
+
+    return { show, hide };
+    const modalController = createModalController();
+    modalController.show( item, genres ); // opens modal with content
+    modalController.hide();             // closes modal
+  }
+
+
+
