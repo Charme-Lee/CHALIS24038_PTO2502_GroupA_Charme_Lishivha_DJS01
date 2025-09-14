@@ -236,13 +236,8 @@ main select {
   color: #ef4444;
 }
 
-Tablet
-  breakpoint
-  (min-width: 481px and max-width: 1023px)
-  @media
-  (min-width: 481px)
-  and
-  (max-width: 1023px) {
+/* Tablet breakpoint (min-width: 481px and max-width: 1023px)
+@media (min-width: 481px) and (max-width: 1023px) {
   header img {
     width: 2.5rem;
     height: 2.5rem;
@@ -334,7 +329,7 @@ Tablet
   .modal-close {
     font-size: 20px;
   }
-}
+} */
 
 /* Desktop breakpoint (min-width: 1024px) */
 @media (min-width: 1024px) {
