@@ -527,9 +527,27 @@ body.modal-open {
   }
 
   #header-right img {
-    width: 1.8rem;
-    height: 2.5rem;
+    width: 1.65rem;
+    height: 2.3rem;
   }
+
+  #filters-wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    font-size: 12px;
+    /* margin: 0 16px; */
+    /* flex-direction: column; */
+    gap: 0.2rem;
+    /* align-items: flex-start; */
+    /* width: 100%; */
+  }
+
+  #filters-wrapper select {
+    width: 50%;
+    margin: 0px;
+  }
+
   main span {
     flex-direction: column;
   }

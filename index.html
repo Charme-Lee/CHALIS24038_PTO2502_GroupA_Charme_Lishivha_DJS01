@@ -58,16 +58,30 @@
           <option>Newest</option>
         </select>
       </span> -->
-      <div class="flex items-center gap-4 font-semibold mb-4">
-        <label class="mr-2">Filter by:</label>
-        <select class="font-medium px-2 py-1 rounded border border-gray-300">
+      <!-- Filters Section -->
+      <div
+        class="flex items-center gap-4 font-medium mb-6"
+        id="filters-wrapper"
+      >
+        <label for="genre" class="text-sm text-gray-700">Filter by:</label>
+
+        <!-- Genre Dropdown -->
+        <select
+          id="genre"
+          class="text-sm min-w-[130px] px-3 py-2 rounded-md border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+        >
           <option>All Genres</option>
           <option>Rock</option>
           <option>Pop</option>
           <option>Country</option>
           <option>Gospel</option>
         </select>
-        <select class="font-medium px-2 py-1 rounded border border-gray-300">
+
+        <!-- Sort Dropdown -->
+        <select
+          id="sort"
+          class="text-sm min-w-[160px] px-3 py-2 rounded-md border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+        >
           <option>Recently Updated</option>
           <option>Most Popular</option>
           <option>Newest</option>
