@@ -1,13 +1,13 @@
 body {
   background-color: #f3f4f6;
   margin: 0;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 1rem;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -30,6 +30,15 @@ header p {
   padding: 1rem;
 } */
 
+/* .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -37,6 +46,8 @@ header p {
   padding: 1rem;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #header-left {
@@ -70,11 +81,11 @@ main {
   padding: 1rem;
 }
 
-main span {
+/* main span {
   display: flex;
   gap: 0.5rem;
   font-weight: 600;
-}
+} */
 
 main select {
   font-weight: 600;

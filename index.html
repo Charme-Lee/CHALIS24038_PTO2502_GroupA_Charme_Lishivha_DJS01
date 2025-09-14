@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
+    />
     <title>Front-End Developer Podacast</title>
     <link rel="icon" href="/assets/podcast.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
@@ -13,7 +16,7 @@
   </head>
   <body class="bg-gray-100">
     <!-- HEADER SECTION -->
-     <div class="header-container">
+    <header class="header-container">
       <div class="flex" id="header-left">
         <img
           src="/assets/podcast-icon.png"
@@ -34,15 +37,15 @@
           alt="Profile Photo"
         />
       </div>
-      </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="p-6">
-      <span class="font-semibold flex">
-        <p>Filter by:</p>
-        <!-- drop down menus -->
-        <select class="font-medium">
+      <!-- <p>Filter by:</p> -->
+      <!-- <span class="font-semibold flex">
+        <p>Filter by:</p> -->
+      <!-- drop down menus -->
+      <!-- <select class="font-medium">
           <option>All Genres</option>
           <option>Rock</option>
           <option>Pop</option>
@@ -54,7 +57,23 @@
           <option>Most Ropular</option>
           <option>Newest</option>
         </select>
-      </span>
+      </span> -->
+      <div class="flex items-center gap-4 font-semibold mb-4">
+        <label class="mr-2">Filter by:</label>
+        <select class="font-medium px-2 py-1 rounded border border-gray-300">
+          <option>All Genres</option>
+          <option>Rock</option>
+          <option>Pop</option>
+          <option>Country</option>
+          <option>Gospel</option>
+        </select>
+        <select class="font-medium px-2 py-1 rounded border border-gray-300">
+          <option>Recently Updated</option>
+          <option>Most Popular</option>
+          <option>Newest</option>
+        </select>
+      </div>
+
       <div class="data-container" id="data-container"></div>
     </main>
 
