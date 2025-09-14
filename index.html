@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-End Developer Podacast</title>
-    <link rel="icon" href="/assets/podcast-icon.png" type="image/png" />
+    <link rel="icon" href="/assets/podcast.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -55,6 +55,31 @@
         </select>
       </span>
     </main>
+
+    <!--Modal  -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modal-close"></button>
+        <div class="modal-content">
+          <img
+            src=""
+            class="modal-cover"
+            id="modal-cover"
+            alt="Podcast Cover Image"
+          />
+          <div class="modal-details">
+            <h2 id="modal-title"></h2>
+            <p class="modal-description" id="modal-description"></p>
+            <div class="modal-genres" id="modal-genres"></div>
+            <p class="modal-updated" id="modal-updated"></p>
+          </div>
+        </div>
+        <div class="modal-seasons" id="modal-seasons">
+          <h3>Seasons</h3>
+          <div id="modal-season-list"></div>
+        </div>
+      </div>
+    </div>
     <!-- <script type="module" src="script.js"></script> -->
   </body>
 </html>
