@@ -12,7 +12,7 @@ export function createPodcastCard(item, genres, onClick) {
   card.innerHTML = `
     <img src="${item.image}" alt="${item.title} Cover Photo"/>
     <h3>${item.title}</h3>
-    <p><img src="icons/calender-icon.svg" alt="calendar-icon"/>${
+    <p><img src="assets/calender-icon.svg" alt="calendar-icon"/>${
       item.seasons
     } seasons</p>
     <span>${genreButtons}</span>

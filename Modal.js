@@ -1,6 +1,7 @@
 // Imports at the Top
 import { formatDate } from "./dateUtil.js";
 import { getGenreTitles } from "./GenreService.js";
+import { seasons } from "./data.js";
 
 // Get DOM Elements
 export function createModalController() {
@@ -15,7 +16,7 @@ export function createModalController() {
   const modalSeasonList = document.getElementById("modal-season-list");
 
   // Show the Modal with data
-  function show(item, genres, seasons = []) {
+  function show(item, genres, season = seasons) {
     // Set Cover Image and Title
     modalCover.src = item.image || "placeholder.jpg";
     modalCover.alt = `${item.title} Cover`;
@@ -32,7 +33,10 @@ export function createModalController() {
     // Generate Season Info
     modalSeasonList.innerHTML = "";
 
-    const seasonData = seasons.find((s) => s.id === item.id);
+    // const seasonData = seasons.find( ( s ) => s.id === item.id );
+    // const seasonData = seasons.find((s) => String( s.id ) === String( item.id ) );
+    const seasonData = seasons.find((s) => String(s.id) === String(item.id));
+    console.log(seasonData);
 
     if (seasonData && Array.isArray(seasonData.seasonDetails)) {
       seasonData.seasonDetails.forEach((season, index) => {

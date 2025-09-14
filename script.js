@@ -1,5 +1,5 @@
 // add imports
-import { seasons, podcasts, genres } from "./data.js";
+import { podcasts, genres } from "./data.js";
 import { createModalController } from "./Modal.js";
 import { createGrid } from "./CreateGrid.js";
 

@@ -1,4 +1,4 @@
-import { createPodcastCard } from "./RenderCards";
+import { createPodcastCard } from "./RenderCards.js";
 
 export function createGrid(container, podcasts, genres, modalController) {
   podcasts.forEach((item) => {
