@@ -42,7 +42,7 @@ main select {
   display: grid;
   grid-template-columns: 1fr;
   /* gap: 10px; */
-  gap: 25px;
+  gap: 24px;
   align-items: stretch;
   padding: 10px;
 }
