@@ -7,6 +7,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   padding: 1rem;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,6 +22,48 @@ header p {
   font-size: 1.5rem;
   font-weight: 600;
   margin-left: 0.5rem;
+}
+
+/* header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+} */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+}
+
+#header-left img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#header-left p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+#header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#header-right img {
+  width: 2rem;
+  height: 2rem;
 }
 
 main {
