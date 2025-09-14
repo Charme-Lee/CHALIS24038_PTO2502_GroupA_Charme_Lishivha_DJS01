@@ -11,4 +11,24 @@ export function createModalController() {
   const modalGenres = document.getElementById("modal-genres");
   const modalUpdated = document.getElementById("modal-updated");
   const modalSeasonList = document.getElementById("modal-season-list");
+
+
+function show(item, genres) {modalCover.src = item.image || "placeholder.jpg";
+modalCover.alt = `${item.title} Cover`;
+modalTitle.textContent = item.title;
+modalDescription.textContent = item.description || "No description available";
+modalUpdated.textContent = `Last updated: ${formatDate(item.updated)}`;
+modalGenres.innerHTML = getGenreTitles(item.genres, genres)
+  .map(g => `<button class="genre-button">${g}</button>`)
+    .join( "" );
+  
+modalSeasonList.innerHTML = "";
+for (let i = 1; i <= item.seasons; i++) {
+  const seasonDiv = document.createElement("div");
+  seasonDiv.className = "season-item";
+  seasonDiv.innerHTML = `
+    Season ${i}: Getting Started ${i}
+    <span>${12 * i} episodes</span>
+  `;
+  modalSeasonList.appendChild(seasonDiv);
 }
