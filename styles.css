@@ -352,7 +352,8 @@ main select {
   }
 
   .data-container {
-    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Fixed 4 columns */
+    /* Fixed 4 columns */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
     padding: 20px;
   }
