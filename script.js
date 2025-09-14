@@ -1,7 +1,7 @@
 // add imports
-import { podcasts, genres } from "./data.js";
-import { createModalController } from "./components/createModal.js";
-import { createGrid } from "./views/createGrid.js";
+import { seasons, podcasts, genres } from "./data.js";
+import { createModalController } from "./Modal.js";
+import { createGrid } from "./CreateGrid.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("data-container");
